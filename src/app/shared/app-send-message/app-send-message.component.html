@@ -1,0 +1,9 @@
+<input
+  [(ngModel)]="messageText"
+  (keyup)="keyupEvent($event)"
+  class="app-input app-flex-fill">
+<button
+  (click)="sendMessage()"
+  placeholder="Type a message..."
+  class="app-button"
+  style="margin-left:4px; margin-right:2px;">Send</button>

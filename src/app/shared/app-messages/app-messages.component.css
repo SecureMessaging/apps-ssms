@@ -1,0 +1,46 @@
+:host {
+    padding:16px;
+    overflow-y:auto;
+    display: block;
+    height: 100%;
+}
+.message-recv .name {
+    color: gray;
+    font-size:11px;
+    padding:4px;
+}
+
+.bubble {
+    padding:8px;
+    border-radius: 8px;
+}
+
+.message-sent .bubble {
+    background-color: #dea9a9;
+}
+
+.message-recv .bubble {
+    background-color: #cbcfde;
+}
+
+.message {
+    margin-bottom:16px;
+}
+
+.message-recv .message {
+    flex-direction: row;
+    display: flex;
+}
+
+.message-sent .message {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.message-sent .name {
+    display: none;
+}
+
+.message>div{
+    max-width: 50%;
+}

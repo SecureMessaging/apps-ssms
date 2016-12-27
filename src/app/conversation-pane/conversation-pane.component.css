@@ -1,0 +1,9 @@
+.title-bar {
+    height: 31px;
+    padding: 4px;
+    background-color: #dcdbdb;
+}
+
+.name {
+    line-height: 31px;
+}

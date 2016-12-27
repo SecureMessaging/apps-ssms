@@ -1,0 +1,23 @@
+:host {
+    display: flex;
+    flex-grow: 1;
+    flex: 1;
+    flex-direction: column;
+}
+
+.content {
+    display:flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.join-buttons {
+    display:flex;
+    flex-direction: column;
+}
+
+.subtext {
+    text-align: center;
+    padding-bottom: 32px;
+}

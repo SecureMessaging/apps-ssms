@@ -1,0 +1,19 @@
+:host {
+    display: inline-block;
+    background-color:firebrick;
+    padding:8px 16px;
+    color:white;
+}
+
+:host:active {
+    background-color:#941111;
+}
+
+:host:not([disabled]) {
+    cursor: pointer;
+}
+
+:host[disabled] {
+    color: #dad4d4;
+    background-color: #c55050;
+}

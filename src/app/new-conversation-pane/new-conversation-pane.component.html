@@ -1,0 +1,17 @@
+<div class="content">
+    <div class="join-buttons">
+        <h1>Start a Conversation</h1>
+        <span class="subtext">
+            Free and Encrypted
+        </span>
+        <input class="app-input"
+            [(ngModel)]="conversationId"
+            placeholder="Enter name or token...">
+        <br/>
+        <button class="app-button"
+            (click)="startConversation()">Start Conversation</button>
+        <br/>
+        <button class="app-button"
+            (click)="joinConversation()">Join Conversation</button>
+    </div>
+</div>

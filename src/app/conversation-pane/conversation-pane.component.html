@@ -1,0 +1,12 @@
+<div class="title-bar app-flex app-flex-row">
+  <span class="name app-flex-fill">
+    {{name}}
+  </span>
+  <button
+    (click)="share()"
+    class="app-button app-flex-none">Share</button>
+</div>
+<div class="app-flex app-flex-fill app-flex-col">
+  <app-messages [conversationId]="conversationId"></app-messages>
+</div>
+<app-send-message [conversationId]="conversationId" class="app-flex-row"></app-send-message>

@@ -1,0 +1,21 @@
+<div class="app-flex-fill app-flex-col">
+  <div class="toobar app-flex-row">
+    <input
+      [(ngModel)]="filterString"
+      (keyup)="filterConversations()"
+      (change)="filterConversations()"
+      placeholder="Search..."
+      class="app-input app-flex-fill">
+    <span
+    (click)="gotoNewConversationScreen()"
+    class='app-button new-button'>+</span>
+  </div>
+  <div class="list app-flex-fill app-flex-col">
+    <div *ngFor="let conversation of filteredConversations"
+        [class.active]="focusedConversationId == conversation.id"
+        class="item"
+        (click)="focusConversation(conversation)">
+      {{conversation.name}}
+    </div>
+  </div>
+</div>

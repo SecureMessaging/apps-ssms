@@ -1,0 +1,13 @@
+<div *ngFor="let message of messages"
+      class="app-flex-col"
+      [class.message-recv]="wasMessageRecieved(message)"
+      [class.message-sent]="wasMessageSent(message)">
+    <div class="message">
+      <div class="app-flex-col">
+        <div class="name">{{message.from}}</div>
+        <span class="bubble">
+          {{message.message}}
+        </span>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+    height:100%;
+    width:100%;
+    margin:0px;
+}
+
+.app-button {
+    display: inline-block;
+    background-color:firebrick;
+    padding:8px 16px;
+    color:white;
+    border:none;
+    outline: none;
+}
+
+.app-button:active {
+    background-color:#941111;
+}
+.app-button:focus:not([disabled]) {
+    box-shadow: 0px 0px 2px #941111;
+}
+
+.app-button:not([disabled]) {
+    cursor: pointer;
+}
+
+.app-button[disabled] {
+    color: #dad4d4;
+    background-color: #c55050;
+}
+
+.app-input {
+    display: inline-block;
+    border:1px solid firebrick;
+    padding:6px 8px;
+    border:none;
+    outline: none;
+}
+
+.app-input:active {
+    border:1px solid #941111;
+}
+.app-input:focus:not([disabled]) {
+    box-shadow: 0px 0px 2px #941111;
+}
+
+.app-input:not([disabled]) {
+    border:1px solid firebrick;
+}
+
+.app-input[disabled] {
+    background-color: #dad4d4;
+    border:1px solid  #c55050;
+}
+
+.app-flex {
+    display: flex;
+}
+
+.app-flex-row {
+    flex-direction: row;
+    display: flex;
+}
+
+.app-flex-row-rev {
+    flex-direction:row-reverse;
+    display: flex;
+}
+
+.app-flex-col {
+    flex-direction: column;
+    display: flex;
+}
+
+.app-flex-col-rev {
+    flex-direction: column-reverse;
+    display: flex;
+}
+
+.app-flex-fill {
+    flex:1;
+    display: flex;
+}
+
+.app-flex-none {
+    flex:0;
+    display: flex;
+}
