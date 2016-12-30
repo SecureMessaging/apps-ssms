@@ -1,0 +1,16 @@
+{
+    "npm_registry": "",
+    "package_name": "${npm.name}-${npm.version}",
+
+    "tasks": {
+        "build_angular": "ng build",
+        "tarball": "tar ./dist ./dist/${package_name}.tar",
+        "publish": "npm publish ./dist/${package_name}.tar --access public",
+        "release_test": "wget http://prod-server/release?package=${name}&version=${version}"
+    },
+
+    "builds": {
+        "test" : ["build_angular", "tarball", "publish", "release_test"],
+        "prod" : ["build_angular", "tarball", "publish"]
+    }
+}
