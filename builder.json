@@ -11,7 +11,7 @@
     },
 
     "builds": {
-        "test" : ["build_angular", "tarball", "publish", "release_test"],
-        "prod" : ["build_angular", "tarball", "publish"]
+        "test" : ["npm_install", "build_angular", "tarball", "publish", "release_test"],
+        "prod" : ["npm_install", "build_angular", "tarball", "publish"]
     }
 }
