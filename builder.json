@@ -5,7 +5,7 @@
     "tasks": {
         "npm_install": "npm install",
         "build_angular": "ng build",
-        "tarball": "tar ./dist ./dist/${package_name}.tar",
+        "tarball": "tar -czf ./dist/${package_name}.tar --directory=\"./dist\" *",
         "publish": "npm publish ./dist/${package_name}.tar --access public",
         "release_test": "wget http://prod-server/release?package=${name}&version=${version}"
     },
