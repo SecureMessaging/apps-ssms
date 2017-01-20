@@ -1,0 +1,23 @@
+---
+- hosts: webservers
+  remote_user: root
+  tasks:
+    - name: Build
+      command: 'wget 127.0.0.1:3000/build?project=apps-ssms'
+
+    - name: Install apps-ssms
+      npm:
+        name: apps-ssms
+        global: no
+        path: /opt/apps-ssms
+
+    - name: "move nginx.conf file"
+      command: "cp /opt/apps-ssms/node_modules/apps-ssms/nginx.conf /etc/nginx/sites-enabled/apps-ssms.conf"
+    
+    - name: "nginx reload"
+      command: "nginx -s reload"
+    
+    
+
+
+...

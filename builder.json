@@ -1,5 +1,5 @@
 {
-    "npm_registry": "",
+    "version_format": "0.0.0-tag",
     "package_name": "${npm.name}-${npm.version}",
 
     "tasks": {
