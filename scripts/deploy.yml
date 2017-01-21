@@ -8,6 +8,7 @@
         name: apps-ssms-test
         global: no
         path: /opt/apps-ssms-test
+        version: latest
 
     - name: "move nginx.conf file"
       command: "cp -T /opt/apps-ssms-test/node_modules/apps-ssms-test/nginx.conf /etc/nginx/sites-enabled/apps-ssms-test.conf"
