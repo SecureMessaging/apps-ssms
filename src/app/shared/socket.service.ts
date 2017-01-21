@@ -16,7 +16,7 @@ export class SocketService {
 
   constructor(private crypto: CryptoService) {
     this.roomSecrets = {};
-    this.socket = io.connect('http://127.0.0.1:8080');
+    this.socket = io.connect(config.environment.socketUrl);
     this.socket.on('connect', () => this.connect);
     this.socket.on('disconnect', () => this.disconnect);
     this.socket.on('joined', (roomId: string, id: string) => this.joined(roomId, id));

@@ -28,3 +28,8 @@ declare module 'crypto-js' {
     var cryptoJS: CryptoJS;
     export = cryptoJS;
 }
+
+declare interface Environment {
+    production: boolean;
+    socketUrl: string
+}
