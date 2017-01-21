@@ -2,22 +2,17 @@
 - hosts: webservers
   remote_user: root
   tasks:
-    - name: Build
-      command: 'wget --timeout=9000 127.0.0.1:3000/build?project=apps-ssms'
 
     - name: Install apps-ssms
       npm:
-        name: apps-ssms
+        name: apps-ssms-test
         global: no
-        path: /opt/apps-ssms
+        path: /opt/apps-ssms-test
 
     - name: "move nginx.conf file"
-      command: "cp /opt/apps-ssms/node_modules/apps-ssms/nginx.conf /etc/nginx/sites-enabled/apps-ssms.conf"
+      command: "cp -T /opt/apps-ssms-test/node_modules/apps-ssms-test/nginx.conf /etc/nginx/sites-enabled/apps-ssms-test.conf"
     
     - name: "nginx reload"
       command: "nginx -s reload"
-    
-    
-
 
 ...
