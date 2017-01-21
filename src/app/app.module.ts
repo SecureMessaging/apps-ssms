@@ -35,7 +35,7 @@ import { NewConversationPaneComponent } from './new-conversation-pane/new-conver
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(rootRouterConfig)
+    RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],
   providers: [StorageService, ConversationService, SocketService, CryptoService],
   bootstrap: [AppComponent]
