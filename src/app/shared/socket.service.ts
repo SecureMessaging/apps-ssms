@@ -4,6 +4,8 @@ import { Subscription } from 'rxjs/Subscription';
 import { CryptoService } from './crypto.service';
 import * as io from 'socket.io-client';
 
+import * as config from '../../environments/environment';
+
 
 @Injectable()
 export class SocketService {
