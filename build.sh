@@ -8,8 +8,11 @@ tar_file="$package_name.$version.tar"
 
 echo "Bulding $package_name@$version"
 
-npm-install-que
+# npm-install-que
+npm-cache install
 ng build --env="prod"
+echo "NG Build Complete"
+echo "Creating Package.json file"
 sed "3s/.*/  \"version\": \"$version\",/" $BUILD_DIR/package.json > $BUILD_DIR/dist/package.json
 sed -i "2s/.*/  \"name\": \"$package_name\",/" $BUILD_DIR/dist/package.json
 echo "Creating TAR file: $BUILD_DIR/$tar_file from $BUILD_DIR/dist"
