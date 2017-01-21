@@ -3,7 +3,7 @@
   remote_user: root
   tasks:
     - name: Build
-      command: 'wget 127.0.0.1:3000/build?project=apps-ssms'
+      command: 'wget --timeout=9000 127.0.0.1:3000/build?project=apps-ssms'
 
     - name: Install apps-ssms
       npm:
