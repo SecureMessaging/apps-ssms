@@ -4,6 +4,7 @@ import { ReplaySubject } from 'rxjs/ReplaySubject';
 import { Subscription } from 'rxjs/Subscription';
 import { SocketService, SocketMessage, SocketMessageType } from './socket.service';
 import { CryptoService } from './crypto.service';
+import { AccountService } from './account.service';
 import { StorageService, StorageItem } from './storage.service';
 
 @Injectable()
@@ -14,7 +15,8 @@ export class ConversationService {
   constructor(
     private socket: SocketService,
     private crypto: CryptoService,
-    private storage: StorageService
+    private storage: StorageService,
+    private account : AccountService
   ) {
     this.conversationDictionary = {};
     this.conversations = new ReplaySubject<Conversation>();
@@ -80,7 +82,7 @@ export class ConversationService {
 
   public sendMessage(conversationId: string, messageText: string): void {
     let message = new Message();
-    message.from = "Evan";
+    message.from = this.account.userName;
     message.message = messageText;
     message.timestamp = new Date().getTime();
     this.socket.sendMessage(conversationId, message);

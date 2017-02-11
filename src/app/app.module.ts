@@ -15,6 +15,7 @@ import { AppSendMessageComponent } from './shared/app-send-message/app-send-mess
 import { SocketService } from './shared/socket.service';
 import { CryptoService } from './shared/crypto.service';
 import { StorageService } from './shared/storage.service';
+import { AccountService } from './shared/account.service';
 import { AppConversationListComponent } from './shared/app-conversation-list/app-conversation-list.component';
 import { ConversationPaneComponent } from './conversation-pane/conversation-pane.component';
 import { NewConversationPaneComponent } from './new-conversation-pane/new-conversation-pane.component';
@@ -37,7 +38,7 @@ import { NewConversationPaneComponent } from './new-conversation-pane/new-conver
     HttpModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],
-  providers: [StorageService, ConversationService, SocketService, CryptoService],
+  providers: [StorageService, ConversationService, SocketService, CryptoService, AccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

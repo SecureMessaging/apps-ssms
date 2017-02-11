@@ -7,7 +7,7 @@ export class CryptoService {
   private userRandomSeed: Array<number>;
 
   constructor() {
-    this.userRandomSeed = [];
+    this.userRandomSeed = [this.randomSmallNumber()];
     this.initUserRandomSeed();
   }
 
@@ -37,11 +37,10 @@ export class CryptoService {
 
   public newSecret(): string {
     return this.getUserRandomSeed();
-    //return CryptoJS.SHA512(Math.random()).toString();
   }
 
   public getUserRandomSeed(){
-    let computerRandom = Math.random();
+    let computerRandom = this.randomLargeNumber();
     let seed = "";
     this.userRandomSeed.forEach(n => seed += (computerRandom * n).toString() );
     return CryptoJS.SHA512(seed).toString();
@@ -64,6 +63,14 @@ export class CryptoService {
         this.userRandomSeed.shift();
       }
     }); 
+  }
+
+  randomSmallNumber() {
+    return Math.floor(Math.random() * 1000);
+  }
+
+  randomLargeNumber() {
+    return Math.floor(Math.random() * 1000);
   }
 
 }
